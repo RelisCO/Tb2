@@ -45,7 +45,7 @@ bot = telebot.TeleBot('1226610855:AAEZ25OoNX7U7eT2dYrOUcEflJMUtEICwvE')
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True,row_width=3)
     btn1 = types.KeyboardButton('Доллар к Рублю')
-    btn2 = types.KeyboardButton('Доллар к Евро')
+    btn2 = types.KeyboardButton('Дюоллар к Евро')
     btn3 = types.KeyboardButton('Рубль к Доллару')
     btn4 = types.KeyboardButton('Рубль к Евро')
     btn5 = types.KeyboardButton('Евро к Рублю')
@@ -58,7 +58,7 @@ def start(message):
 def mess(message):
     get_message_bot = message.text.strip().lower()
     print(get_message_bot)
-    if get_message_bot == "доллар к рублю":
+    if get_message_bot == "доллар к рблю":
         final_message = "1 доллар = "+get_currency_price("DOLLAR_RUB")+" рублей"
     elif get_message_bot == "доллар к евро":
         final_message = "1 доллар = "+get_currency_price("DOLLAR_EURO")+" евро"
