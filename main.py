@@ -83,8 +83,8 @@ def mess(message):
     btn5 = types.KeyboardButton('Евро к Рублю')
     btn6 = types.KeyboardButton('Евро к Доллару')
     markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
-    print("--- %s seconds ---" %(time.time()-start_time))
-    bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
+    timefor = "--- %s seconds ---" %(time.time()-start_time)
+    bot.send_message(message.chat.id, f'<b>{final_message}</b>\n {timefor}', parse_mode='html', reply_markup=markup)
 
 
 
